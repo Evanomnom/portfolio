@@ -75,8 +75,8 @@ export default function Home() {
             <span className="text-2xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">About Me</span>
             <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
               <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="me.jpg" alt="Picture of me"/>
-              <div className="text-sm lg:text-xl lg:max-w-md lg:text-left">I'm a Computer Science major at UNC Charlotte with a focus on Mobile and Web Applications.
-              I'm set to graduate after Summer 2022. <br/><br/> Hope you enjoy looking through my work! </div>
+              <div className="text-sm lg:text-xl lg:max-w-md lg:text-left">I&apos;m a Computer Science major at UNC Charlotte with a focus on Mobile and Web Applications.
+              I&apos;m set to graduate after Summer 2022. <br/><br/> Hope you enjoy looking through my work! </div>
             </div>
           </div>
         </ParallaxLayer>
