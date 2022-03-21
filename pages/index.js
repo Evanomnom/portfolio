@@ -115,12 +115,12 @@ export default function Home() {
           <div className="flex flex-col h-screen w-screen justify-center items-center">
             <span className="text-2xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">Why EvansCoolPlace.com?</span>
             <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
-              <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank">
+              <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank" rel="noreferrer">
                 <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="oldevanscoolplace.png" alt="Picture of my website in 2011" style={fadeInStyles} />
               </a>
               <div className="text-sm md:text-lg lg:text-xl lg:max-w-md lg:text-left">The domain name is an homage to a website I built in HTML when I was 9 years old. 
                 This version of EvansCoolPlace is still available on 
-                <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank"><span className="italic">WebArchive</span></a>!
+                <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank" rel="noreferrer"><span className="italic">WebArchive</span></a>!
                 <br /><br /> 
                 I like to think of EvansCoolPlace now as a showcase of my work sprung from that childhood passion.
               </div>
