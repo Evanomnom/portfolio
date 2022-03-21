@@ -39,7 +39,7 @@ export default function Home() {
   const parallax = useRef()
 
   //page variables
-  const numPages = 3;
+  const numPages = 4;
 
   //fade-in animation
   const fadeInStyles = useSpring({
@@ -76,28 +76,56 @@ export default function Home() {
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" strategy='beforeInteractive'></Script>
 
       <Parallax ref={parallax} pages={numPages}>
+        <ParallaxLayer className="ml-2 pt-2" sticky={{ start: 0, end: 3 }} style={{width: "2.5rem"}}>
+          <animated.div style={fadeInStyles}>
+            <img src="menu.png" alt="menu" className="icon" onClick={() => (console.log("test"))} />
+          </animated.div>
+        </ParallaxLayer>
+
         <ParallaxLayer 
           offset={0} 
           speed={.25}
           onClick={() => parallax.current.scrollTo(1)}>
             <div className="flex flex-col h-screen w-screen justify-center items-center">
-              <animated.div className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide" style={instantFadeIn}>Evan Hemming</animated.div>
+              <animated.div className="text-3xl lg:text-4xl font-bold tracking-wide" style={instantFadeIn}>Evan Hemming</animated.div>
               <animated.div className="text-lg md:text-xl lg:text-2xl font-medium pt-1" style={titleFadeIn}>Web and Software Developer</animated.div>
               <animated.div className="text-sm mt-10 lg:text-lg" style={fadeInStyles}>Tap or Scroll to See More</animated.div>
             </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={.25}>
+        <ParallaxLayer 
+          offset={1} 
+          speed={.25}
+          onClick={() => parallax.current.scrollTo(2)}>
           <div className="flex flex-col h-screen w-screen justify-center items-center">
-            <span className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">About Me</span>
+            <span className="text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">About Me</span>
             <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
               <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="me.jpg" alt="Picture of me"/>
               <div className="text-sm md:text-lg lg:text-xl lg:max-w-md lg:text-left">I&apos;m a Computer Science major at UNC Charlotte with a focus on Mobile and Web Applications.
-              I&apos;m set to graduate after Summer 2022. <br/><br/> Hope you enjoy looking through my work! </div>
+                I&apos;m set to graduate after Summer 2022. 
+                <br/><br/> 
+                Hope you enjoy looking through my work! 
+              </div>
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={.25}>
-          <p className='text-white'>TEST</p>
+        <ParallaxLayer 
+          offset={2} 
+          speed={.25}
+          onClick={() => parallax.current.scrollTo(0)}>
+          <div className="flex flex-col h-screen w-screen justify-center items-center">
+            <span className="text-2xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">Why EvansCoolPlace.com?</span>
+            <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
+              <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank">
+                <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="oldevanscoolplace.png" alt="Picture of my website in 2011" style={fadeInStyles} />
+              </a>
+              <div className="text-sm md:text-lg lg:text-xl lg:max-w-md lg:text-left">The domain name is an homage to a website I built in HTML when I was 9 years old. 
+                This version of EvansCoolPlace is still available on 
+                <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank"><span className="italic">WebArchive</span></a>!
+                <br /><br /> 
+                I like to think of EvansCoolPlace now as a showcase of my work sprung from that childhood passion.
+              </div>
+            </div>
+          </div>
         </ParallaxLayer>
       </Parallax>
     </div>
