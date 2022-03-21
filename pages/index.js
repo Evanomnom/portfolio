@@ -86,7 +86,7 @@ export default function Home() {
           offset={0} 
           speed={.25}
           onClick={() => parallax.current.scrollTo(1)}>
-            <div className="flex flex-col h-screen w-screen justify-center items-center">
+            <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
               <animated.div className="text-3xl lg:text-4xl font-bold tracking-wide" style={instantFadeIn}>Evan Hemming</animated.div>
               <animated.div className="text-lg md:text-xl lg:text-2xl font-medium pt-1" style={titleFadeIn}>Web and Software Developer</animated.div>
               <animated.div className="text-sm mt-10 lg:text-lg" style={fadeInStyles}>Tap or Scroll to See More</animated.div>
@@ -96,7 +96,7 @@ export default function Home() {
           offset={1} 
           speed={.25}
           onClick={() => parallax.current.scrollTo(2)}>
-          <div className="flex flex-col h-screen w-screen justify-center items-center">
+          <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
             <span className="text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">About Me</span>
             <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
               <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="me.jpg" alt="Picture of me"/>
@@ -112,7 +112,7 @@ export default function Home() {
           offset={2} 
           speed={.25}
           onClick={() => parallax.current.scrollTo(0)}>
-          <div className="flex flex-col h-screen w-screen justify-center items-center">
+          <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
             <span className="text-2xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">Why EvansCoolPlace.com?</span>
             <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
               <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank" rel="noreferrer">
