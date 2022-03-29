@@ -48,7 +48,7 @@ export default function Home() {
     from: {opacity: 0},
     reset: true,
     delay: 3000,
-    config: config.molasses
+    config: config.slow
   })
 
   const titleFadeIn = useSpring({
@@ -56,7 +56,7 @@ export default function Home() {
     from: { opacity: 0 },
     reset: true,
     delay: 1500,
-    config: config.molasses
+    config: config.slow
   })
 
   const instantFadeIn = useSpring({
@@ -64,7 +64,7 @@ export default function Home() {
     from: { opacity: 0 },
     reset: true,
     delay: 500,
-    config: config.molasses
+    config: config.slow
   })
 
   
