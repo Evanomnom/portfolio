@@ -72,7 +72,7 @@ export default function MajorProjects() {
                             <a href="https://www.cardlegame.com/" target="_blank" rel="noreferrer">
                                 <Boop><img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="cardle.png" alt="Picture of my website in 2011" /></Boop>
                             </a>
-                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md lg:text-left">
+                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">
                                 Wordle-like game with minions from the collectible card game Hearthstone. Played by tens of thousands of users!
                                 <br /><br />
                                 Featured on 
@@ -100,7 +100,7 @@ export default function MajorProjects() {
                             <a href="https://fm.pldyn.net/movies" target="_blank" rel="noreferrer">
                                 <Boop><img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="flickmeter.png" alt="Screenshot of the FlickMeter search page" /></Boop>
                             </a>
-                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md lg:text-left">
+                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">
                                 Movie database with audience scores aggregated from iMDB, Rotten Tomatoes, Metacritic, and more.
                                 <br /><br />
                                 Features advanced filters, movie search, and movie/actor pages with detailed information.
@@ -120,7 +120,7 @@ export default function MajorProjects() {
                             <a href="https://youtu.be/3uKIXJ4oQnA" target="_blank" rel="noreferrer">
                                 <Boop><img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="handsfree.png" alt="Screenshot from the HandsFree web app" /></Boop>
                             </a>
-                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md lg:text-left">
+                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">
                                 Menu management web app built for small restaurants to create hands-free menus linked by QR codes.
                                 <br /><br />
                                 Features account authentication and subscription payment processing.
@@ -138,7 +138,7 @@ export default function MajorProjects() {
                         <span className="text-2xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">Datavard Quick Analysis</span>
                         <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
                             <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="datavard.png" alt="Screenshot from the Datavard Quick Analysis web app" />
-                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md lg:text-left">
+                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">
                                 Python-based web app that compiles business information from an SAP database into an interactive platform.
                                 <br /><br />
                                 Built for SAP partner company Datavard.

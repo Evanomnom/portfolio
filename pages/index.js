@@ -101,7 +101,7 @@ export default function Home() {
             <span className="text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">About Me</span>
             <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
               <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="me.jpg" alt="Picture of me" />
-              <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md lg:text-left">I&apos;m a Computer Science major at UNC Charlotte with a focus on Mobile and Web Applications.
+              <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">I&apos;m a Computer Science major at UNC Charlotte with a focus on Mobile and Web Applications.
                 I&apos;m set to graduate after Summer 2022. 
                 <br/><br/> 
                 Hope you enjoy looking through my work! 
@@ -119,7 +119,7 @@ export default function Home() {
               <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank" rel="noreferrer">
                 <Boop><img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="oldevanscoolplace.png" alt="Screenshot of my website from 2011" /></Boop>
               </a>
-              <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md lg:text-left">The domain name is an homage to a website I built in HTML when I was 9 years old. 
+              <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">The domain name is an homage to a website I built in HTML when I was 9 years old. 
                 This version of EvansCoolPlace is still available on   
                 <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank" rel="noreferrer"><span className="font-bold"> Web Archive</span></a>!
                 <br /><br /> 
