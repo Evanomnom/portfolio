@@ -22,7 +22,7 @@ export default function Navigation(props) {
     const router = useRouter();
 
     return (
-        <animated.div style={props.animation} className="absolute top-0 z-10">
+        <div style={props.animation} className="absolute top-0 z-10">
             {hasWindow && mobileWidth &&
                 <div className="ml-2 mt-2">
                     <Menu menuButton={<MenuButton><img src="menu.png" alt="menu" className="icon w-10" /></MenuButton>}>
@@ -65,6 +65,6 @@ export default function Navigation(props) {
                     </Link>
                 </div>
             }
-        </animated.div>
+        </div>
     )
 }
