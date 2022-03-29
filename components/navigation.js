@@ -24,31 +24,33 @@ export default function Navigation(props) {
     return (
         <animated.div style={props.animation} className="absolute top-0 z-10">
             {hasWindow && mobileWidth &&
-                <Menu menuButton={<MenuButton><img src="menu.png" alt="menu" className="icon ml-2 pt-2 w-10" /></MenuButton>}>
-                    <Link href="/">
-                        <a className={router.pathname == "/" ? "font-black" : "font-light"}>
-                            <MenuItem>Home</MenuItem>
-                        </a>
-                    </Link>
-                    <Link href="/major_projects">
-                        <a className={router.pathname == "/major_projects" ? "font-black" : "font-light"}>
-                            <MenuItem>Major Projects</MenuItem>
-                        </a>
-                    </Link>
-                    <Link href="/minor_projects">
-                        <a className={router.pathname == "/minor_projects" ? "font-black" : "font-light"}>
-                            <MenuItem>Minor Projects</MenuItem>
-                        </a>
-                    </Link>
-                    <Link href="/contact">
-                        <a className={router.pathname == "/contact" ? "font-black" : "font-light"}>
-                            <MenuItem>Contact</MenuItem>
-                        </a>
-                    </Link>
-                </Menu>
+                <div className="ml-2 mt-2">
+                    <Menu menuButton={<MenuButton><img src="menu.png" alt="menu" className="icon w-10" /></MenuButton>}>
+                        <Link href="/">
+                            <a className={router.pathname == "/" ? "font-black" : "font-light"}>
+                                <MenuItem>Home</MenuItem>
+                            </a>
+                        </Link>
+                        <Link href="/major_projects">
+                            <a className={router.pathname == "/major_projects" ? "font-black" : "font-light"}>
+                                <MenuItem>Major Projects</MenuItem>
+                            </a>
+                        </Link>
+                        <Link href="/minor_projects">
+                            <a className={router.pathname == "/minor_projects" ? "font-black" : "font-light"}>
+                                <MenuItem>Minor Projects</MenuItem>
+                            </a>
+                        </Link>
+                        <Link href="/contact">
+                            <a className={router.pathname == "/contact" ? "font-black" : "font-light"}>
+                                <MenuItem>Contact</MenuItem>
+                            </a>
+                        </Link>
+                    </Menu>
+                </div>
             }
             {hasWindow && !mobileWidth &&
-                <div className="flex w-screen justify-center items-center gap-x-8 lg:gap-x-10 xl:gap-x-14 pt-3 text-xl xl:text-2xl z-10">
+                <div className="flex w-screen justify-center items-center gap-x-8 lg:gap-x-12 xl:gap-x-16 pt-3 text-xl z-10">
                     <Link href="/">
                         <a className={router.pathname == "/" ? "font-black" : "font-light hover:font-semibold"}>Home</a>
                     </Link>
