@@ -48,7 +48,7 @@ export default function Navigation(props) {
                 </Menu>
             }
             {hasWindow && !mobileWidth &&
-                <div className="flex w-screen justify-center items-center gap-x-8 lg:gap-x-10 xl:gap-x-14 pt-3 text-xl z-10">
+                <div className="flex w-screen justify-center items-center gap-x-8 lg:gap-x-10 xl:gap-x-14 pt-3 text-2xl z-10">
                     <Link href="/">
                         <a className={router.pathname == "/" ? "font-black" : "font-light hover:font-semibold"}>Home</a>
                     </Link>
