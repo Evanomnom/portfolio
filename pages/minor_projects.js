@@ -71,9 +71,9 @@ export default function MinorProjects() {
                         <InfoBox>
                             <LinkedImage link="https://youtu.be/mQkCMU0UFL8" src="blackjack.jpg" alt="Linked screenshot of the Blackjack Neutral Net demo"/>
                             <Description>
-                                Neural network trained in Blackjack using Unity's ML-Agents that will beat the house over time.
+                                Neural network trained in Blackjack using Unity ML-Agents that will beat the house over time.
                                 <br/><br/>
-                                Alongside front-facing game information, the model keeps track of a "card counter" variable to inform decisions.
+                                Alongside front-facing game information, the model keeps track of a card counter variable to inform decisions.
                                 <br/><br/>
                                 Technologies used: Unity, ML-Agents, Tensorflow
                             </Description>
