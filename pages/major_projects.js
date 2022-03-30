@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import DOTS from 'vanta/dist/vanta.dots.min'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Navigation from '../components/navigation.js'
-import Boop from '../components/boop.js'
+import { ContentBox, Title, LongTitle, InfoBox, Image, LinkedImage, Description, LinkedText } from '../components/componentstyles.js'
 
 export default function MajorProjects() {
     //animated background
@@ -57,96 +57,108 @@ export default function MajorProjects() {
                     offset={0}
                     speed={.25}
                     onClick={() => parallax.current.scrollTo(1)}>
-                    <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
+                    <ContentBox>
                         <span className="text-3xl lg:text-5xl font-bold tracking-wide pb-5">Major Projects</span>
                         <span className="text-md lg:text-xl">Tap or Scroll to Browse</span>
-                    </div>
+                    </ContentBox>
                 </ParallaxLayer>
                 <ParallaxLayer
                     offset={1}
                     speed={.25}
                     onClick={() => parallax.current.scrollTo(2)}>
-                    <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-                        <span className="text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">Cardle</span>
-                        <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
-                            <a href="https://www.cardlegame.com/" target="_blank" rel="noreferrer">
-                                <Boop><img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="cardle.png" alt="Picture of my website in 2011" /></Boop>
-                            </a>
-                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">
+                    <ContentBox>
+                        <Title>Cardle (2022)</Title>
+                        <InfoBox>
+                            <LinkedImage link="https://www.cardlegame.com/" src="cardle.png" alt="Linked screenshot of the Cardle web app"/>
+                            <Description>
                                 Wordle-like game with minions from the collectible card game Hearthstone. Played by tens of thousands of users!
                                 <br /><br />
                                 Featured on 
-                                <a href="https://esports.gg/news/hearthstone/hearthstone-wordle/" target="_blank" rel="noreferrer"><span className="font-bold"> Esports.gg</span></a>
+                                <LinkedText link="https://esports.gg/news/hearthstone/hearthstone-wordle/" text=" Esports.gg"/>
                                 ,
-                                <a href="https://outof.cards/hearthstone/4136-enjoy-wordle-try-out-a-hearthstone-version-where-you-guess-the-minion-cardle" target="_blank" rel="noreferrer"><span className="font-bold"> OutOfCards</span></a>
+                                <LinkedText link="https://outof.cards/hearthstone/4136-enjoy-wordle-try-out-a-hearthstone-version-where-you-guess-the-minion-cardle" text=" OutOfCards" />
                                 ,
-                                <a href="https://www.youtube.com/watch?v=KaG7--xwqxs" target="_blank" rel="noreferrer"><span className="font-bold"> Zeddy HS</span></a>
+                                <LinkedText link="https://www.youtube.com/watch?v=KaG7--xwqxs" text=" Zeddy HS" />
                                 . Reveal
-                                <a href="https://twitter.com/boomemdee/status/1483197103144849416" target="_blank" rel="noreferrer"><span className="font-bold"> tweet </span></a>
+                                <LinkedText link="https://twitter.com/boomemdee/status/1483197103144849416" text=" tweet "/>
                                 reached 190k+ impressions.
                                 <br /><br />
                                 Technologies used: React, Tailwind CSS, Python
-                            </div>
-                        </div>
-                    </div>
+                            </Description>
+                        </InfoBox>
+                    </ContentBox>
                 </ParallaxLayer>
                 <ParallaxLayer
                     offset={2}
                     speed={.25}
                     onClick={() => parallax.current.scrollTo(3)}>
-                    <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-                        <span className="text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">FlickMeter</span>
-                        <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
-                            <a href="https://fm.pldyn.net/movies" target="_blank" rel="noreferrer">
-                                <Boop><img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="flickmeter.png" alt="Screenshot of the FlickMeter search page" /></Boop>
-                            </a>
-                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">
+                    <ContentBox>
+                        <Title>FlickMeter (2021)</Title>
+                        <InfoBox>
+                            <LinkedImage link="https://fm.pldyn.net/movies" src="flickmeter.png" alt="Linked screenshot of the FlickMeter search page" />
+                            <Description>
                                 Movie database with audience scores aggregated from iMDB, Rotten Tomatoes, Metacritic, and more.
                                 <br /><br />
                                 Features advanced filters, movie search, and movie/actor pages with detailed information.
                                 <br /><br />
                                 Technologies used: EJS, Bootstrap, Express, MongoDB, Python
-                            </div>
-                        </div>
-                    </div>
+                            </Description>
+                        </InfoBox>
+                    </ContentBox>
                 </ParallaxLayer>
                 <ParallaxLayer
                     offset={3}
                     speed={.25}
                     onClick={() => parallax.current.scrollTo(4)}>
-                    <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-                        <span className="text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">HandsFree</span>
-                        <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
-                            <a href="https://youtu.be/3uKIXJ4oQnA" target="_blank" rel="noreferrer">
-                                <Boop><img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="handsfree.png" alt="Screenshot from the HandsFree web app" /></Boop>
-                            </a>
-                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">
+                    <ContentBox>
+                        <Title>HandsFree (2020)</Title>
+                        <InfoBox>
+                            <LinkedImage link="https://youtu.be/3uKIXJ4oQnA" src="handsfree.png" alt="Linked screenshot from the HandsFree web app" />
+                            <Description>
                                 Menu management web app built for small restaurants to create hands-free menus linked by QR codes.
                                 <br /><br />
                                 Features account authentication and subscription payment processing.
                                 <br /><br />
                                 Technologies used: NextJS, MongoDB, Tailwind CSS, Stripe, Auth0
-                            </div>
-                        </div>
-                    </div>
+                            </Description>
+                        </InfoBox>
+                    </ContentBox>
                 </ParallaxLayer>
                 <ParallaxLayer
                     offset={4}
                     speed={.25}
-                    onClick={() => parallax.current.scrollTo(0)}>
-                    <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-                        <span className="text-2xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">Datavard Quick Analysis</span>
-                        <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
-                            <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="datavard.png" alt="Screenshot from the Datavard Quick Analysis web app" />
-                            <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">
+                    onClick={() => parallax.current.scrollTo(5)}>
+                    <ContentBox>
+                        <LongTitle>Datavard Quick Analysis (2021)</LongTitle>
+                        <InfoBox>
+                            <Image src="datavard.png" alt="Screenshot from the Datavard Quick Analysis web app"/>
+                            <Description>
                                 Python-based web app that compiles business information from an SAP database into an interactive platform.
                                 <br /><br />
                                 Built for SAP partner company Datavard.
                                 <br /><br />
                                 Technologies used: Python, Dash, HTML/CSS, ABAP (SQL)
-                            </div>
-                        </div>
-                    </div>
+                            </Description>
+                        </InfoBox>
+                    </ContentBox>
+                </ParallaxLayer>
+                <ParallaxLayer
+                    offset={5}
+                    speed={.25}
+                    onClick={() => parallax.current.scrollTo(0)}>
+                    <ContentBox>
+                        <Title>Evans Cool Place (2022)</Title>
+                        <InfoBox>
+                            <Image src="portfolio.png" alt="Screenshot from this Portfolio wesbite" />
+                            <Description>
+                                This portfolio website!
+                                <br /><br />
+                                Features modular designs for mobile accessibility, custom animations, and handcrafted UI components
+                                <br /><br />
+                                Technologies used: NextJS, Tailwind CSS, React-Spring
+                            </Description>
+                        </InfoBox>
+                    </ContentBox>
                 </ParallaxLayer>
             </Parallax>
         </div>

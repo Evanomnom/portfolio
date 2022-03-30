@@ -1,12 +1,11 @@
 import Head from 'next/head'
 import Script from 'next/script'
-import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react'
 import DOTS from 'vanta/dist/vanta.dots.min'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import {useSpring, animated, config} from 'react-spring'
-import Boop from '../components/boop.js'
 import Navigation from '../components/navigation.js'
+import { ContentBox, Title, LongTitle, InfoBox, Image, LinkedImage, Description, LinkedText } from '../components/componentstyles.js'
 
 export default function Home() {
   //animated background
@@ -48,7 +47,7 @@ export default function Home() {
     from: {opacity: 0},
     reset: true,
     delay: 3000,
-    config: config.slow
+    config: config.molasses
   })
 
   const titleFadeIn = useSpring({
@@ -56,7 +55,7 @@ export default function Home() {
     from: { opacity: 0 },
     reset: true,
     delay: 1500,
-    config: config.slow
+    config: config.molasses
   })
 
   const instantFadeIn = useSpring({
@@ -64,7 +63,7 @@ export default function Home() {
     from: { opacity: 0 },
     reset: true,
     delay: 500,
-    config: config.slow
+    config: config.molasses
   })
 
   
@@ -87,46 +86,47 @@ export default function Home() {
           offset={0} 
           speed={.25}
           onClick={() => parallax.current.scrollTo(1)}>
-            <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
+            <ContentBox>
               <animated.div className="text-3xl lg:text-5xl font-bold tracking-wide" style={instantFadeIn}>Evan Hemming</animated.div>
               <animated.div className="text-lg md:text-xl lg:text-3xl font-medium pt-1" style={titleFadeIn}>Web and Software Developer</animated.div>
               <animated.div className="text-sm mt-10 lg:text-lg" style={fadeInStyles}>Tap or Scroll to Learn More</animated.div>
-            </div>
+            </ContentBox>
         </ParallaxLayer>
         <ParallaxLayer 
           offset={1} 
           speed={.25}
           onClick={() => parallax.current.scrollTo(2)}>
-          <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-            <span className="text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">About Me</span>
-            <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
-              <img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="me.jpg" alt="Picture of me" />
-              <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">I&apos;m a Computer Science major at UNC Charlotte with a focus on Mobile and Web Applications.
+          <ContentBox>
+            <Title>About Me</Title>
+            <InfoBox>
+              <Image src="me.jpg" alt="Picture of me" />
+              <Description>
+                I&apos;m a Computer Science major at UNC Charlotte with a focus on Mobile and Web Applications.
                 I&apos;m set to graduate after Summer 2022. 
                 <br/><br/> 
                 Hope you enjoy looking through my work! 
-              </div>
-            </div>
-          </div>
+              </Description>
+            </InfoBox>
+          </ContentBox>
         </ParallaxLayer>
         <ParallaxLayer 
           offset={2} 
           speed={.25}
           onClick={() => parallax.current.scrollTo(0)}>
-          <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-            <span className="text-2xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">Why EvansCoolPlace.com?</span>
-            <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 items-center align-center px-10 lg:p-0 lg:items-start">
-              <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank" rel="noreferrer">
-                <Boop><img className="max-h-80 max-w-80 rounded-lg px-4 lg:px-0" src="oldevanscoolplace.png" alt="Screenshot of my website from 2011" /></Boop>
-              </a>
-              <div className="text-sm md:text-lg lg:text-xl xl:text-2xl lg:max-w-md xl:max-w-lg lg:text-left">The domain name is an homage to a website I built in HTML when I was 9 years old. 
+          <ContentBox>
+            <LongTitle>Why EvansCoolPlace.com?</LongTitle>
+            <InfoBox>
+              <LinkedImage link="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" src="oldevanscoolplace.png" alt="Screenshot of my website from 2011"/>
+              <Description>
+                The domain name is an homage to a website I built in HTML when I was 9 years old. 
                 This version of EvansCoolPlace is still available on   
-                <a href="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" target="_blank" rel="noreferrer"><span className="font-bold"> Web Archive</span></a>!
+                <LinkedText link="https://web.archive.org/web/20110201202849/http://evanscoolplace.com/" text=" Web Archive"/>
+                !
                 <br /><br /> 
                 I like to think of EvansCoolPlace now as a showcase of my work sprung from that childhood passion.
-              </div>
-            </div>
-          </div>
+              </Description>
+            </InfoBox>
+          </ContentBox>
         </ParallaxLayer>
       </Parallax>
     </div>
