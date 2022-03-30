@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Script from 'next/script'
 import React, { useState, useEffect, useRef } from 'react'
 import DOTS from 'vanta/dist/vanta.dots.min'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Navigation from '../components/navigation.js'
+import { ContentBox, LinkedIcon } from '../components/componentstyles.js'
 
 export default function Contact() {
     //animated background
@@ -32,13 +32,6 @@ export default function Contact() {
         }
     }, [vantaEffect])
 
-
-    //parallax scrolling
-    const parallax = useRef()
-
-    //page variables
-    const numPages = 4;
-
     return (
         <div ref={bgRef} className="h-screen w-screen">
             <Head>
@@ -50,33 +43,16 @@ export default function Contact() {
 
             <Navigation animation={{}} />
 
-            <Parallax ref={parallax} pages={numPages}>
-
-                <ParallaxLayer
-                    offset={0}
-                    speed={.25}
-                    onClick={() => parallax.current.scrollTo(1)}>
-                    <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-                        <span className="text-3xl lg:text-4xl font-bold tracking-wide pb-5 lg:pb-10">Contact</span>
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={1}
-                    speed={.25}
-                    onClick={() => parallax.current.scrollTo(2)}>
-                    <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={2}
-                    speed={.25}
-                    onClick={() => parallax.current.scrollTo(0)}>
-                    <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
-
-                    </div>
-                </ParallaxLayer>
-            </Parallax>
+            <ContentBox>
+                <span className="text-4xl lg:text-6xl font-bold tracking-wide pb-10 lg:pb-12">Contact Me</span>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 xl:gap-16">
+                    <LinkedIcon link="https://github.com/Evanomnom" src="github.png" alt="Linked GitHub icon"/>
+                    <LinkedIcon link="https://www.linkedin.com/in/evan-hemming/" src="linkedinwhite.png" alt="Linked LinkedIn icon" />
+                    <LinkedIcon link="mailto:ehemming@gmail.com" src="email.png" alt="Linked Email icon" />
+                    <LinkedIcon link="https://twitter.com/boomemdee" src="twitterwhite.png" alt="Linked Twitter icon" />
+                </div>
+                <span className="text-lg lg:text-xl pt-10">Email: ehemming99@gmail.com</span>
+            </ContentBox>
         </div>
     )
 }

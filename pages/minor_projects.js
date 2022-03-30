@@ -58,8 +58,8 @@ export default function MinorProjects() {
                     speed={.25}
                     onClick={() => parallax.current.scrollTo(1)}>
                     <ContentBox>
-                        <span className="text-3xl lg:text-5xl font-bold tracking-wide pb-5">Minor Projects</span>
-                        <span className="text-md lg:text-xl">Tap or Scroll to Browse</span>
+                        <span className="text-4xl lg:text-5xl font-bold tracking-wide pb-5">Minor Projects</span>
+                        <span className="text-lg lg:text-xl">Tap or Scroll to Browse</span>
                     </ContentBox>
                 </ParallaxLayer>
                 <ParallaxLayer

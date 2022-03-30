@@ -1,8 +1,9 @@
 import Boop from "./boop"
+import Link from "next/link"
 
 function ContentBox (props) {
     return (
-        <div className="flex flex-col h-screen w-screen justify-center items-center pb-10 md:pb-0">
+        <div className="flex flex-col h-screen w-screen justify-center items-center pb-12 md:pb-0">
             {props.children}
         </div>
     )
@@ -66,5 +67,30 @@ function LinkedText(props){
     );
 }
 
+function SectionBox(props){
+    return (
+        <div className="flex flex-col items-center justify-center max-w-sm lg:max-w-xs">
+            <Link href={props.link}>
+                <a>
+                    <Boop>
+                        <span className="text-2xl underline font-semibold lg:text-4xl">{props.title}</span>
+                    </Boop>
+                </a>
+            </Link>
+            <span className="text-lg pt-1 lg:pt-3 lg:text-xl">{props.info}</span>
+        </div>
+    );
+}
 
-export {ContentBox, Title, LongTitle, InfoBox, Image, LinkedImage, Description, LinkedText};
+function LinkedIcon(props){
+    return(
+        <a href={props.link} target="_blank" rel="noreferrer">
+            <Boop rotation={8}>
+                <img className="h-32 w-32 lg:h-40 lg:w-40" src={props.src} alt={props.alt} />
+            </Boop>
+        </a>
+    );
+}
+
+
+export {ContentBox, Title, LongTitle, InfoBox, Image, LinkedImage, Description, LinkedText, SectionBox, LinkedIcon};

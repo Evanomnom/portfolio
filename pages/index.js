@@ -5,7 +5,7 @@ import DOTS from 'vanta/dist/vanta.dots.min'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import {useSpring, animated, config} from 'react-spring'
 import Navigation from '../components/navigation.js'
-import { ContentBox, Title, LongTitle, InfoBox, Image, LinkedImage, Description, LinkedText } from '../components/componentstyles.js'
+import { ContentBox, Title, LongTitle, InfoBox, Image, LinkedImage, Description, LinkedText, SectionBox } from '../components/componentstyles.js'
 
 export default function Home() {
   //animated background
@@ -88,7 +88,7 @@ export default function Home() {
           onClick={() => parallax.current.scrollTo(1)}>
             <ContentBox>
               <animated.div className="text-3xl lg:text-5xl font-bold tracking-wide" style={instantFadeIn}>Evan Hemming</animated.div>
-              <animated.div className="text-lg md:text-xl lg:text-3xl font-medium pt-1" style={titleFadeIn}>Web and Software Developer</animated.div>
+              <animated.div className="text-lg md:text-xl lg:text-3xl font-medium pt-1" style={titleFadeIn}>Full-Stack Web Developer</animated.div>
               <animated.div className="text-sm mt-10 lg:text-lg" style={fadeInStyles}>Tap or Scroll to Learn More</animated.div>
             </ContentBox>
         </ParallaxLayer>
@@ -112,7 +112,7 @@ export default function Home() {
         <ParallaxLayer 
           offset={2} 
           speed={.25}
-          onClick={() => parallax.current.scrollTo(0)}>
+          onClick={() => parallax.current.scrollTo(3)}>
           <ContentBox>
             <LongTitle>Why EvansCoolPlace.com?</LongTitle>
             <InfoBox>
@@ -126,6 +126,19 @@ export default function Home() {
                 I like to think of EvansCoolPlace now as a showcase of my work sprung from that childhood passion.
               </Description>
             </InfoBox>
+          </ContentBox>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={3}
+          speed={.25}
+          onClick={() => parallax.current.scrollTo(0)}>
+          <ContentBox>
+            <Title>Portfolio Sections</Title>
+            <div className="flex flex-col gap-8 xl:gap-12 lg:flex-row jusitfy-center px-10 pt-10 lg:px-0 lg:max-w-4xl xl:max-w-5xl">
+              <SectionBox link="/major_projects" title="Major Projects" info="Long-term web development projects"/>
+              <SectionBox link="/minor_projects" title="Minor Projects" info="Miscellaneous works over the years" />
+              <SectionBox link="/minor_projects" title="Contact Info" info="Email, GitHub, LinkedIn, Twitter, etc." />
+            </div>
           </ContentBox>
         </ParallaxLayer>
       </Parallax>

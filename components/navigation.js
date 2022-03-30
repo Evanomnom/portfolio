@@ -1,5 +1,3 @@
-import { useSpring, animated, config } from 'react-spring'
-import { ParallaxLayer } from '@react-spring/parallax'
 import useWindowDimensions from '../hooks/useWindowDimensions.js'
 import Link from 'next/link'
 import { useRouter } from 'next/router';
