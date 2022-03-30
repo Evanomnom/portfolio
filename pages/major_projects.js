@@ -41,7 +41,7 @@ export default function MajorProjects() {
     const numPages = 6;
 
     return (
-        <div ref={bgRef} className="h-screen w-screen">
+        <div ref={bgRef} className="h-screen w-screen" style={{ maxHeight: "-webkit-fill-available" }}>
             <Head>
                 <title>Major Projects</title>
                 <link rel="icon" href="/logo.png" />
@@ -52,7 +52,6 @@ export default function MajorProjects() {
             <Navigation animation = {{}} />
 
             <Parallax ref={parallax} pages={numPages}>
-
                 <ParallaxLayer
                     offset={0}
                     speed={.25}

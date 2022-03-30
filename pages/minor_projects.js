@@ -41,7 +41,7 @@ export default function MinorProjects() {
     const numPages = 4;
 
     return (
-        <div ref={bgRef} className="h-screen w-screen">
+        <div ref={bgRef} className="h-screen w-screen" style={{ maxHeight: "-webkit-fill-available" }}>
             <Head>
                 <title>Minor Projects</title>
                 <link rel="icon" href="/logo.png" />

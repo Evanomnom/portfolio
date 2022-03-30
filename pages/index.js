@@ -69,7 +69,7 @@ export default function Home() {
   
 
   return (
-    <div ref={bgRef} className="h-screen w-screen">     
+    <div ref={bgRef} className="h-screen w-screen" style={{ maxHeight: "-webkit-fill-available" }}>     
       <Head>
         <title>Evans Cool Place</title>
         <link rel="icon" href="/logo.png" />

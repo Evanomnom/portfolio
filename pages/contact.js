@@ -33,7 +33,7 @@ export default function Contact() {
     }, [vantaEffect])
 
     return (
-        <div ref={bgRef} className="h-screen w-screen">
+        <div ref={bgRef} className="h-screen w-screen" style={{ maxHeight: "-webkit-fill-available" }}>
             <Head>
                 <title>Contact Info</title>
                 <link rel="icon" href="/logo.png" />
