@@ -43,8 +43,8 @@ export default function MajorProjects() {
     return (
         <div ref={bgRef} className="h-screen w-screen">
             <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
+                <title>Major Projects</title>
+                <link rel="icon" href="/logo.png" />
             </Head>
 
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" strategy='beforeInteractive'></Script>

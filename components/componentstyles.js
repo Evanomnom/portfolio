@@ -3,7 +3,7 @@ import Link from "next/link"
 
 function ContentBox (props) {
     return (
-        <div className="flex flex-col h-screen w-screen justify-center items-center pb-12 md:pb-0">
+        <div className="flex flex-col h-screen w-screen justify-center items-center" style={{maxHeight: "-webkit-fill-available"}}>
             {props.children}
         </div>
     )
