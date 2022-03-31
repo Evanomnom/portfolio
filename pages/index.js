@@ -137,7 +137,7 @@ export default function Home() {
             <div className="flex flex-col gap-8 xl:gap-12 lg:flex-row jusitfy-center px-10 pt-10 lg:px-0 lg:max-w-4xl xl:max-w-5xl">
               <SectionBox link="/major_projects" title="Major Projects" info="Long-term web development projects"/>
               <SectionBox link="/minor_projects" title="Minor Projects" info="Miscellaneous works over the years" />
-              <SectionBox link="/minor_projects" title="Contact Info" info="Email, GitHub, LinkedIn, Twitter, etc." />
+              <SectionBox link="/contact" title="Contact Info" info="Email, GitHub, LinkedIn, Twitter, etc." />
             </div>
           </ContentBox>
         </ParallaxLayer>
