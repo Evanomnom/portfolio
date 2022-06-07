@@ -102,9 +102,9 @@ export default function Home() {
               <Image src="me.jpg" alt="Picture of me" />
               <Description>
                 I&apos;m a Computer Science major at UNC Charlotte with a focus on Mobile and Web Applications.
-                I&apos;m set to graduate after Summer 2022. 
+                I&apos;m set to graduate after Fall 2022. 
                 <br/><br/> 
-                Hope you enjoy looking through my work! 
+                Tech Proficiencies: HTML/CSS, Javascript, Node.js, React.js, Vue, EJS, Express, Java, C#, Python
               </Description>
             </InfoBox>
           </ContentBox>
